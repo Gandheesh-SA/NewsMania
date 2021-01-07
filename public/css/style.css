@@ -1,0 +1,204 @@
+.main{
+    padding: 3rem;
+    background: url("/images/one.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.heading{
+    text-align: center;
+}
+.heading h1{
+    position: relative;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 12vw;
+    color:whitesmoke	;
+    -webkit-text-stroke: 0.3vw #fff;
+}
+.heading h1::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    color: #002366;
+    -webkit-text-stroke: 0vw #fff;
+    border-right: 5px solid #002366;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    
+    }
+    70%,90%{
+        width: 80%;
+    }
+}
+.nav-item{
+    padding: .2rem 1rem;    
+}
+.nav-links{
+    font-family: 'Nerko One', cursive;
+    font-size: 1.5rem;
+    color:#002366;
+}
+.nav-links:hover{
+    color: #ff1493	;
+    font-size: 1.9rem;
+    text-decoration: none;
+}
+circle{
+    fill: none;
+    stroke-width: 3.5;
+    animation-name: preloader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: 170px 170px;
+    will-change: transform;
+}
+.loader{
+    
+    max-width: 60rem;
+    width: 100%;
+    height: auto;
+    stroke-linecap: round;
+    margin-left: 2rem;
+}
+circle:nth-of-type(1){
+    stroke-dasharray: 550px;
+    animation-delay: -0.15s;
+}
+circle:nth-of-type(2){
+    stroke-dasharray: 500px;
+    animation-delay: -0.3s;
+}
+circle:nth-of-type(3){
+    stroke-dasharray: 450px;
+    animation-delay: -0.45s;
+}
+circle:nth-of-type(4){
+    stroke-dasharray: 300px;
+    animation-delay: -0.6s;
+}
+@keyframes preloader{
+    50%{
+        transform: rotate(360deg);
+    }
+}
+.boxcontainer{
+    margin: 2rem 1rem;
+    box-shadow: 8px 12px 8px 8px #ffd1dc;
+    display: flex;
+    height: 32rem;
+}
+.box1{
+    margin-top: 3rem;
+    
+    position: relative;
+    width: 30%;
+    justify-content: center;
+  align-items: center;
+    text-align: center;
+    height: 30rem;
+    
+}
+.box2{
+   text-align: center;
+    width: 70%;
+    height: 30rem;
+    margin: 4rem 9rem;
+}
+.box1 .number .centered{
+
+  position: absolute;
+  top:-80px;
+  left:20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Finger Paint', cursive;
+  font-size: 22rem;
+  font-weight: bolder;
+}
+.btn{
+    background-color: #ffd1dc;
+}
+.s{
+    margin-top: 2rem;
+}
+.box2 h4 {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #CC0000;
+}
+.box2 h2{
+    margin-top: 2rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+}
+.lin{
+    font-family: 'Itim', cursive;
+    font-size: 1.8rem;
+}
+#heading{
+    min-height: 30rem;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+    overflow: hidden;
+    font-family: 'Rock Salt', cursive;
+    font-size: 4rem;
+    word-spacing: 4px;
+    letter-spacing: 2.5px;
+}
+#heading .boxes{
+    position: absolute;
+    width: 1400px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  overflow:hidden;
+
+}
+.boxes1{
+    background-color:#ffd1dc;
+    transform-origin: right;
+    transform: perspective(500px) translateX(-50%) rotateY(-15deg);
+}
+.boxes2{
+    background-color:#ffd1dc;
+    transform-origin: left;
+    transform: perspective(500px) translateX(50%) rotateY(15deg);
+}
+.boxes h2{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    font-size: 8rem;
+    left:0;
+    color:#002366 ;
+    font-weight: bolder;
+    animation: animates 15s linear infinite ;
+}
+.boxes2 h2{
+  left: -100%;
+}
+@keyframes animates{
+    0%{
+        transform: translate(2800px);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}

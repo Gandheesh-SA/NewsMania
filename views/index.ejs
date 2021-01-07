@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+<section id="heading">
+    <div class="boxes boxes1">
+    <h2><%= title %> News <%=title %> News <%= title %> News <%=title %> News <%= title %> News <%=title %> News</h2>
+    </div>
+    <div class="boxes boxes2">
+        <h2><%= title %> News <%=title %> News <%= title %> News <%=title %> News <%= title %> News <%=title %> News</h2>
+        </div>
+</section>
+<% for(var i=0;i<newsData.length;i++){%>
+<div class="boxcontainer">
+    <div class="box1">
+        <svg class="loader" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 340">
+            <circle cx="170" cy="170" r="160" stroke="#a81d4d" />
+            <circle cx="170" cy="170" r="135" stroke="#0f5298" />            
+            <circle cx="170" cy="170" r="110" stroke="#f18db5" />
+            <circle cx="170" cy="170" r="85" stroke="#94dee2" />
+        </svg>
+        <div class="number">
+            <h1 class="centered"><%= i+1 %></h1>
+        </div>
+
+    </div>
+    <div class="box2">
+      <h4>| <%=newsData[i].sectionName %> |</h4>
+      <p><span class="dt">Date</span> published: <%=newsData[i].webPublicationDate.substr(0,10) %> <span class="dt">Time:</span><%=newsData[i].webPublicationDate.substr(11) %></p>
+      <h2><%=newsData[i].webTitle%></h2>      
+     <a  href="<%=newsData[i].webUrl%>"><button type="button" class="btn s btn-lg"><span class="lin">Read More</span></button></a>
+
+    </div>
+</div>
+<%}%>
